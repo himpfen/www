@@ -236,8 +236,53 @@ body {
 }
 
 .page-hero {
-  background: linear-gradient(180deg, #fff, #f8fafd);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(26, 115, 232, 0.08) 0%,
+      rgba(52, 168, 83, 0.06) 35%,
+      rgba(251, 188, 4, 0.07) 70%,
+      rgba(234, 67, 53, 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #f8fbff 0%,
+      #ffffff 100%
+    );
   border-bottom: 1px solid #edf0f4;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.45) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: .55;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.45),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.page-hero .container-xl {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero .display-5 {
+  letter-spacing: -0.045em;
+}
+
+.page-hero .lead {
+  color: #5f6368;
 }
 
 .page-content {
