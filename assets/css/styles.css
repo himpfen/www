@@ -238,18 +238,14 @@ body {
 .page-hero {
   position: relative;
   overflow: hidden;
+  padding: 7rem 0;
   background:
     linear-gradient(
-      135deg,
-      rgba(26, 115, 232, 0.08) 0%,
-      rgba(52, 168, 83, 0.06) 35%,
-      rgba(251, 188, 4, 0.07) 70%,
-      rgba(234, 67, 53, 0.06) 100%
-    ),
-    linear-gradient(
-      180deg,
-      #f8fbff 0%,
-      #ffffff 100%
+      140deg,
+      #eef5ff 0%,
+      #f4fbf7 28%,
+      #fff9eb 58%,
+      #fff1ef 100%
     );
   border-bottom: 1px solid #edf0f4;
 }
@@ -258,18 +254,45 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(26,115,232,.18) 0%,
+      transparent 22%
+    ),
+    linear-gradient(
+      220deg,
+      rgba(52,168,83,.14) 0%,
+      transparent 30%
+    ),
+    linear-gradient(
+      310deg,
+      rgba(251,188,4,.16) 0%,
+      transparent 34%
+    ),
+    linear-gradient(
+      25deg,
+      rgba(234,67,53,.12) 0%,
+      transparent 26%
+    );
+  mix-blend-mode: multiply;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,.45) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.45) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-size: 42px 42px;
   opacity: .55;
   mask-image: linear-gradient(
-    to right,
-    rgba(0,0,0,.9),
-    rgba(0,0,0,.45),
+    to bottom,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.35),
     transparent
   );
-  pointer-events: none;
 }
 
 .page-hero .container-xl {
@@ -278,11 +301,19 @@ body {
 }
 
 .page-hero .display-5 {
-  letter-spacing: -0.045em;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  letter-spacing: -0.05em;
+  max-width: 11ch;
 }
 
 .page-hero .lead {
-  color: #5f6368;
+  font-size: 1.15rem;
+  max-width: 42rem;
+  color: #4b5563;
+}
+
+.page-hero .text-secondary {
+  color: #374151 !important;
 }
 
 .page-content {
