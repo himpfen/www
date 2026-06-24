@@ -1,12 +1,23 @@
 :root {
-  --ink: #202124;
-  --muted: #5f6368;
-  --line: #dadce0;
-  --soft: #f8fafd;
-  --blue: #1a73e8;
-  --red: #ea4335;
-  --yellow: #fbbc04;
-  --green: #34a853;
+  --ink: #17242b;
+  --muted: #5c6b73;
+  --line: #d8e3e7;
+  --soft: #f4fafb;
+
+  --blue: #2f86b7;
+  --blue-deep: #214b6b;
+  --teal: #1f6b78;
+  --teal-deep: #155360;
+  --cyan: #35b9b1;
+  --aqua: #77d7d0;
+
+  --brand-gradient: linear-gradient(
+    135deg,
+    #214b6b 0%,
+    #2f86b7 32%,
+    #1f6b78 68%,
+    #35b9b1 100%
+  );
 }
 
 body {
@@ -28,8 +39,25 @@ body {
   max-width: 680px;
 }
 
+.site-nav {
+  backdrop-filter: blur(14px);
+}
+
 .navbar-brand {
   letter-spacing: -0.03em;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--ink);
+}
+
+.brand-lockup img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .nav-link {
@@ -37,19 +65,24 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--ink);
+  color: var(--teal);
+}
+
+.btn-outline-dark {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.btn-outline-dark:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
 }
 
 .hero {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(120deg,
-      #1a73e8 0%,
-      #4285f4 18%,
-      #34a853 42%,
-      #fbbc04 68%,
-      #ea4335 100%);
+  background: var(--brand-gradient);
   background-size: 220% 220%;
   animation: heroShift 18s ease infinite;
 }
@@ -59,16 +92,16 @@ body {
   position: absolute;
   inset: auto 0 0 0;
   height: 1px;
-  background: var(--line);
+  background: rgba(255,255,255,.24);
 }
 
 .hero-pattern {
   position: absolute;
   inset: 0;
-  opacity: .18;
+  opacity: .2;
   background-image:
-    linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(90deg, rgba(0,0,0,.85), rgba(0,0,0,.35), transparent 82%);
 }
@@ -87,13 +120,13 @@ body {
 .hero .lead,
 .hero .eyebrow,
 .hero .hero-index span {
-  color: white !important;
+  color: #fff !important;
 }
 
 .hero .btn-light {
   background: rgba(255,255,255,.14);
   border-color: rgba(255,255,255,.25);
-  color: white;
+  color: #fff;
 }
 
 .hero .btn-light:hover {
@@ -130,7 +163,7 @@ body {
   border-radius: 999px;
   background: rgba(255,255,255,.08);
   backdrop-filter: blur(14px);
-  color: white;
+  color: #fff;
   font-size: .95rem;
 }
 
@@ -149,8 +182,8 @@ body {
 
 .unit-card:hover {
   transform: translateY(-4px);
-  border-color: #c6c9ce;
-  box-shadow: 0 18px 48px rgba(60,64,67,.12);
+  border-color: #bdd2da;
+  box-shadow: 0 18px 48px rgba(23,36,43,.12);
 }
 
 .unit-card a {
@@ -169,9 +202,18 @@ body {
   margin-bottom: 44px;
 }
 
-.unit-icon.blue { background: var(--blue); }
-.unit-icon.red { background: var(--red); }
-.unit-icon.yellow { background: var(--yellow); color: #2b2200; }
+.unit-icon.blue {
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+}
+
+.unit-icon.red {
+  background: linear-gradient(135deg, var(--teal), var(--cyan));
+}
+
+.unit-icon.yellow {
+  background: linear-gradient(135deg, var(--cyan), var(--aqua));
+  color: #08343a;
+}
 
 .unit-card h3 {
   letter-spacing: -0.035em;
@@ -185,8 +227,8 @@ body {
 
 .bg-soft {
   background: var(--soft);
-  border-top: 1px solid #edf0f4;
-  border-bottom: 1px solid #edf0f4;
+  border-top: 1px solid #e4eef1;
+  border-bottom: 1px solid #e4eef1;
 }
 
 .work-list {
@@ -211,7 +253,7 @@ body {
 }
 
 .work-item:hover {
-  background: #fbfbfb;
+  background: #f7fbfc;
 }
 
 .work-item span {
@@ -228,7 +270,9 @@ body {
   padding: 4px 0 4px 18px;
 }
 
-.principle:nth-child(1) { border-color: var(--blue); }
+.principle:nth-child(1) {
+  border-color: var(--teal);
+}
 
 .principle p {
   color: var(--muted);
@@ -241,13 +285,13 @@ body {
   padding: 7rem 0;
   background:
     linear-gradient(
-      140deg,
-      #eef5ff 0%,
-      #f4fbf7 28%,
-      #fff9eb 58%,
-      #fff1ef 100%
+      135deg,
+      #eaf7fb 0%,
+      #eef9f8 34%,
+      #f7fbfc 68%,
+      #e8f3f7 100%
     );
-  border-bottom: 1px solid #edf0f4;
+  border-bottom: 1px solid #dce9ee;
 }
 
 .page-hero::before {
@@ -255,26 +299,9 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(
-      115deg,
-      rgba(26,115,232,.18) 0%,
-      transparent 22%
-    ),
-    linear-gradient(
-      220deg,
-      rgba(52,168,83,.14) 0%,
-      transparent 30%
-    ),
-    linear-gradient(
-      310deg,
-      rgba(251,188,4,.16) 0%,
-      transparent 34%
-    ),
-    linear-gradient(
-      25deg,
-      rgba(234,67,53,.12) 0%,
-      transparent 26%
-    );
+    linear-gradient(115deg, rgba(47,134,183,.22) 0%, transparent 28%),
+    linear-gradient(225deg, rgba(31,107,120,.18) 0%, transparent 34%),
+    linear-gradient(315deg, rgba(53,185,177,.18) 0%, transparent 38%);
   mix-blend-mode: multiply;
 }
 
@@ -283,16 +310,11 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.45) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
   background-size: 42px 42px;
   opacity: .55;
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.85),
-    rgba(0,0,0,.35),
-    transparent
-  );
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,.35), transparent);
 }
 
 .page-hero .container-xl {
@@ -309,11 +331,11 @@ body {
 .page-hero .lead {
   font-size: 1.15rem;
   max-width: 42rem;
-  color: #4b5563;
+  color: #39535d;
 }
 
 .page-hero .text-secondary {
-  color: #374151 !important;
+  color: #2f5662 !important;
 }
 
 .page-content {
@@ -342,7 +364,7 @@ body {
 
 .article-body a,
 .page-content a {
-  color: var(--blue);
+  color: var(--teal);
 }
 
 .post-card {
@@ -358,7 +380,7 @@ body {
 }
 
 .post-card a:hover {
-  color: var(--blue);
+  color: var(--teal);
 }
 
 .post-card p:last-child {
@@ -400,6 +422,15 @@ footer {
   .py-lg-6 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .brand-lockup img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .page-hero {
+    padding: 5rem 0;
   }
 }
 
