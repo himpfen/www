@@ -1,0 +1,18 @@
+---
+layout: page
+title: Blog
+kicker: Journal
+description: Notes on independent digital work, portfolio structure, web infrastructure, media systems, and long-term maintenance.
+---
+
+<div class="row g-4">
+  {% for post in site.posts %}
+  <div class="col-md-6">
+    <article class="post-card h-100">
+      <p class="text-secondary small mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h2 class="h4"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.description }}</p>
+    </article>
+  </div>
+  {% endfor %}
+</div>

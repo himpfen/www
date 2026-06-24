@@ -1,0 +1,41 @@
+title: Himpfen
+description: Independent work across media, research, infrastructure, publishing, and open systems.
+url: "https://himpfen.com"
+baseurl: ""
+lang: en
+timezone: America/Toronto
+
+author:
+  name: Himpfen
+  url: https://himpfen.com
+
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/img/social-card.svg
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
