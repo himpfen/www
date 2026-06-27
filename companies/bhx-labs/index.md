@@ -7,6 +7,8 @@ description: Research-led software, experimental infrastructure, open systems, p
 
 BHX Labs is the technical and research-oriented arm of the Himpfen ecosystem. It is where experimental systems, protocols, data infrastructure, and open-source projects can be developed without being forced into a media or publication format.
 
+<a href="https://bhx.ca/" class="btn btn-dark rounded-pill px-4">View BHWS</a>
+
 ## Focus
 
 BHX Labs is suited for projects that require deeper technical framing: databases, data models, AI workflows, provenance systems, agent protocols, and research infrastructure.
