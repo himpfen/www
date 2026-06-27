@@ -7,6 +7,8 @@ description: Editorial properties, newsletters, research publishing, audience-fa
 
 Brandon Himpfen Media is the home for public-facing editorial work. It organizes publications, websites, newsletters, research pages, and media brands that are built for readers.
 
+<a href="https://brandonhimpfenmedia.com/" class="btn btn-dark rounded-pill px-4">View BH Media</a>
+
 ## Focus
 
 This area supports content that needs a clear audience, consistent publishing model, editorial voice, and long-term discoverability.
