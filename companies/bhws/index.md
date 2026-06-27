@@ -7,6 +7,8 @@ description: Shared web services, APIs, internal tooling, deployment systems, au
 
 BHWS is the infrastructure layer for the ecosystem. It is not the public editorial brand and not the experimental research lab. It exists to support practical operations.
 
+<a href="https://bhws.net/" class="btn btn-dark rounded-pill px-4">View BHWS</a>
+
 ## Focus
 
 BHWS is useful for APIs, internal dashboards, workflow tooling, deployment conventions, automation, hosting patterns, and shared services that keep the wider portfolio running.
